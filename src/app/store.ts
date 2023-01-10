@@ -1,9 +1,11 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import { todoReducer } from './todo.slice';
+import { todoReducer } from './todos.slice';
+import { folderReducer } from './folders.slice';
 
 export const store = configureStore({
   reducer: {
-    todo: todoReducer
+    todo: todoReducer,
+    folders: folderReducer
   },
 });
 

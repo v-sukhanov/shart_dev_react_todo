@@ -1,10 +1,12 @@
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 import type { RootState, AppDispatch } from './store';
 import { bindActionCreators } from '@reduxjs/toolkit';
-import { todoActions } from './todo.slice';
+import { todoActions } from './todos.slice';
+import { folderActions } from './folders.slice';
 
 const actions = {
-	...todoActions
+	...todoActions,
+	...folderActions
 }
 
 export const useAppActions = () => {

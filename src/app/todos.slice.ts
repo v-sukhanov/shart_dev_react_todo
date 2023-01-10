@@ -11,7 +11,7 @@ const initialState: ITodoSliceState = {
 	todos: JSON.parse(localStorage.getItem(TODOS_KEY) ?? '[]')
 }
 
-export const todoSlice = createSlice({
+export const todosSlice = createSlice({
 	name: 'todo',
 	initialState,
 	reducers: {
@@ -33,5 +33,5 @@ export const todoSlice = createSlice({
 	}
 })
 
-export const todoActions = todoSlice.actions;
-export const todoReducer = todoSlice.reducer;
+export const todoActions = todosSlice.actions;
+export const todoReducer = todosSlice.reducer;
